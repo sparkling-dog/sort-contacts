@@ -1,0 +1,11 @@
+td {
+    background-color: antiquewhite;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid rgb(141, 44, 44);
+}
