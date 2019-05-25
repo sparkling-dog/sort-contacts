@@ -2,6 +2,21 @@ import Component from './Component.js';
 
 class TableHeader extends Component {
 
+    render() {
+        const tableHead = this.renderDOM();
+        const onSort = this.props.onSort;
+        const buttons = tableHead.querySelectorAll('button');
+        
+        const propertyArray = ['firstName', 'lastName', 'favoriteFruit', 'age'];
+
+        buttons.forEach((button, i) => {
+            button.addEventListener('click', () => {
+                onSort({ property: propertyArray[i] });
+            });
+        });
+
+        return tableHead;
+    }
 
     renderTemplate() {
         return /*html*/ `

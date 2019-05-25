@@ -1,4 +1,5 @@
 /* eslint quotes: off*/
+import sortList from '../src/sortList.js';
 
 const test = QUnit.test;
 
@@ -71,15 +72,3 @@ test('sort by fruit', assert => {
     assert.deepEqual(sorted, [pruitt, cantu, george]);
 });
 
-function sortList(contacts, sortOptions) {
-    const property = sortOptions.property;
-    return contacts.slice().sort((a, b) => {
-        if(a[property] > b[property]) {
-            return 1;
-        }
-        else if(b[property] > a[property]) {
-            return -1;
-        }
-        return 0;
-    });
-}
