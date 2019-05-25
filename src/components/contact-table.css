@@ -1,0 +1,11 @@
+td {
+    background-color: antiquewhite;
+}
+
+table {
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: pink;
+}
